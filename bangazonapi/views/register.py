@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseNotAllowed
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework import status
 from rest_framework.authtoken.models import Token
 from bangazonapi.models import Customer
 
@@ -76,4 +77,4 @@ def register_user(request):
 
     # Return the token to the client
     data = json.dumps({"token": token.key, "id": new_user.id})
-    return HttpResponse(data, content_type='application/json')
+    return HttpResponse(data, content_type='application/json', status=status.HTTP_201_CREATED)
