@@ -45,13 +45,7 @@ class Users(ViewSet):
 
 
     def list(self, request):
-        """Handle GET requests to customers resource
-        Purpose: Allow a user to communicate with the Bangazon database to retrieve  list of users
-        Methods:  GET
-
-        Returns:
-            Response -- JSON serialized list of park areas
-        """
+        """Handle GET requests to user resource"""
         users = User.objects.all()
         serializer = UserSerializer(
             users, many=True, context={'request': request})

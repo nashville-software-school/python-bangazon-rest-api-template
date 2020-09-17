@@ -4,7 +4,7 @@
    Methods: GET, POST
 """
 
-"""View module for handling requests about park areas"""
+"""View module for handling requests about product categories"""
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -15,11 +15,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
 class ProductCategorySerializer(serializers.HyperlinkedModelSerializer):
-    """JSON serializer for park areas
-
-    Arguments:
-        serializers
-    """
+    """JSON serializer for product category"""
     class Meta:
         model = ProductCategory
         url = serializers.HyperlinkedIdentityField(
@@ -30,7 +26,7 @@ class ProductCategorySerializer(serializers.HyperlinkedModelSerializer):
 
 
 class ProductCategories(ViewSet):
-    """Park Areas for Kennywood Amusement Park"""
+    """Categories for products"""
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def create(self, request):
@@ -48,11 +44,7 @@ class ProductCategories(ViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def retrieve(self, request, pk=None):
-        """Handle GET requests for single park area
-
-        Returns:
-            Response -- JSON serialized park area instance
-        """
+        """Handle GET requests for single category"""
         try:
             category = ProductCategory.objects.get(pk=pk)
             serializer = ProductCategorySerializer(category, context={'request': request})
@@ -61,11 +53,7 @@ class ProductCategories(ViewSet):
             return HttpResponseServerError(ex)
 
     def list(self, request):
-        """Handle GET requests to park ProductCategorys resource
-
-        Returns:
-            Response -- JSON serialized list of park ProductCategorys
-        """
+        """Handle GET requests to ProductCategory resource"""
         product_category = ProductCategory.objects.all()
 
         # Support filtering ProductCategorys by area id

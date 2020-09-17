@@ -1,16 +1,10 @@
-"""View module for handling requests about park areas"""
+"""View module for handling requests about customer payment types"""
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from bangazonapi.models import Payment, Customer
-
-'''
-auther: Tyler Carpenter
-purpose: Allow a user to communicate with the Bangazon database to GET PUT POST and DELETE entries.
-methods: all
-'''
 
 
 class PaymentSerializer(serializers.HyperlinkedModelSerializer):
@@ -25,11 +19,11 @@ class PaymentSerializer(serializers.HyperlinkedModelSerializer):
             view_name='payment',
             lookup_field='id'
         )
-        fields = ('id', 'url', 'merchant_name', 'account_number', 'expiration_date', 'create_date')
+        fields = ('id', 'url', 'merchant_name', 'account_number',
+                  'expiration_date', 'create_date')
 
 
 class Payments(ViewSet):
-
 
     def create(self, request):
         """Handle POST operations
@@ -46,7 +40,8 @@ class Payments(ViewSet):
         new_payment.customer = customer
         new_payment.save()
 
-        serializer = PaymentSerializer(new_payment, context={'request': request})
+        serializer = PaymentSerializer(
+            new_payment, context={'request': request})
 
         return Response(serializer.data)
 
@@ -58,14 +53,14 @@ class Payments(ViewSet):
         """
         try:
             payment_type = Payment.objects.get(pk=pk)
-            serializer = PaymentSerializer(payment_type, context={'request': request})
+            serializer = PaymentSerializer(
+                payment_type, context={'request': request})
             return Response(serializer.data)
         except Exception as ex:
             return HttpResponseServerError(ex)
 
-
     def destroy(self, request, pk=None):
-        """Handle DELETE requests for a single park are
+        """Handle DELETE requests for a single payment type
 
         Returns:
             Response -- 200, 404, or 500 status code
@@ -83,11 +78,7 @@ class Payments(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     def list(self, request):
-        """Handle GET requests to park attractions resource
-
-        Returns:
-            Response -- JSON serialized list of park attractions
-        """
+        """Handle GET requests to payment type resource"""
         payment_types = Payment.objects.all()
 
         # Support filtering attractions by area id

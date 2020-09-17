@@ -1,4 +1,4 @@
-"""View module for handling requests about park areas"""
+"""View module for handling requests about customer shopping cart"""
 import datetime
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response

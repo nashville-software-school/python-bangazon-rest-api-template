@@ -1,4 +1,4 @@
-"""View module for handling requests about park areas"""
+"""View module for handling requests about customer order"""
 import datetime
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet

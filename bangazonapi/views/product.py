@@ -1,4 +1,4 @@
-"""View module for handling requests about park areas"""
+"""View module for handling requests about products"""
 import base64
 from django.core.files.base import ContentFile
 from django.http import HttpResponseServerError
