@@ -79,3 +79,6 @@ class OrderTests(APITestCase):
         self.assertEqual(json_response["size"], 0)
         self.assertEqual(len(json_response["lineitems"]), 0)
 
+    # TODO: Complete order by adding payment type
+
+    # TODO: New line item is not added to closed order

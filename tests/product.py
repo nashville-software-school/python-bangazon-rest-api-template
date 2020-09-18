@@ -94,3 +94,9 @@ class ProductTests(APITestCase):
         json_response = json.loads(response.content)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(json_response), 3)
+
+    # TODO: Delete product
+
+    # TODO: Product should be soft deleted if previously purchased
+
+    # TODO: Product can be rated. Assert average rating exists.
