@@ -11,15 +11,11 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.parsers import MultiPartParser, FormParser
 
 
-class ProductSerializer(serializers.HyperlinkedModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     """JSON serializer for products"""
     class Meta:
         model = Product
-        url = serializers.HyperlinkedIdentityField(
-            view_name='product',
-            lookup_field='id'
-        )
-        fields = ('id', 'url', 'name', 'price', 'number_sold', 'description',
+        fields = ('id', 'name', 'price', 'number_sold', 'description',
                   'quantity', 'created_date', 'location', 'image_path',
                   'average_rating', 'can_be_rated', 'category',)
         depth = 1
@@ -105,7 +101,8 @@ class Products(ViewSet):
             data = ContentFile(base64.b64decode(imgstr), name=f'{new_product.id}-{request.data["name"]}.{ext}')
 
             new_product.image_path = data
-            new_product.save()
+
+        new_product.save()
 
         serializer = ProductSerializer(
             new_product, context={'request': request})

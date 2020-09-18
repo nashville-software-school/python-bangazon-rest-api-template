@@ -113,7 +113,7 @@ class Cart(ViewSet):
                 customer=current_user, payment_type=None)
 
             products_on_order = Product.objects.filter(
-                line_items__order=open_order)
+                lineitems__order=open_order)
 
             serialized_order = OrderSerializer(
                 open_order, many=False, context={'request': request})

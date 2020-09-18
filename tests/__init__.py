@@ -1,1 +1,2 @@
-from .product import ProfileTests
+from .product import ProductTests
+from .order import OrderTests
