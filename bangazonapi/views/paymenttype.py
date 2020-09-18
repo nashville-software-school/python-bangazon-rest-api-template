@@ -43,7 +43,7 @@ class Payments(ViewSet):
         serializer = PaymentSerializer(
             new_payment, context={'request': request})
 
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def retrieve(self, request, pk=None):
         """Handle GET requests for single payment type

@@ -1,8 +1,6 @@
 import json
-import datetime
 from rest_framework import status
 from rest_framework.test import APITestCase
-from .product import ProductTests
 
 
 class OrderTests(APITestCase):
@@ -24,7 +22,6 @@ class OrderTests(APITestCase):
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token)
         response = self.client.post(url, data, format='json')
 
-
         # Create a product
         url = "/products"
         data = { "name": "Kite", "price": 14.99, "quantity": 60, "description": "It flies high", "category_id": 1, "location": "Pittsburgh" }
@@ -35,8 +32,9 @@ class OrderTests(APITestCase):
 
     def test_add_product_to_order(self):
         """
-        Ensure we can create a new product.
+        Ensure we can add a product to an order.
         """
+        # Add product to order
         url = "/cart"
         data = { "product_id": 1 }
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token)
@@ -44,6 +42,7 @@ class OrderTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
+        # Get cart and verify product was added
         url = "/cart"
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token)
         response = self.client.get(url, None, format='json')
@@ -53,4 +52,30 @@ class OrderTests(APITestCase):
         self.assertEqual(json_response["id"], 1)
         self.assertEqual(json_response["size"], 1)
         self.assertEqual(len(json_response["lineitems"]), 1)
+
+
+    def test_remove_product_from_order(self):
+        """
+        Ensure we can remove a product from an order.
+        """
+        # Add product
+        self.test_add_product_to_order()
+
+        # Remove product from cart
+        url = "/cart/1"
+        data = { "product_id": 1 }
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token)
+        response = self.client.delete(url, data, format='json')
+
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+        # Get cart and verify product was removed
+        url = "/cart"
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token)
+        response = self.client.get(url, None, format='json')
+        json_response = json.loads(response.content)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(json_response["size"], 0)
+        self.assertEqual(len(json_response["lineitems"]), 0)
 
