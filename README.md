@@ -8,7 +8,7 @@
 brew install libtiff libjpeg webp little-cms2
 ```
 
-### Linux
+### Linux (WSL)
 
 ```sh
 sudo apt-get install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
@@ -16,18 +16,28 @@ sudo apt-get install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
     libharfbuzz-dev libfribidi-dev libxcb1-dev
 ```
 
+### Install apidoc
+
+```sh
+npm install apidoc -g
+```
+
 ## Setup
 
 1. Clone this repository and change to the directory in the terminal.
 1. Run `pipenv shell`
 1. Run `pipenv install`
-1. Execute `./seed_data.sh`
+1. Type this exact thing into the terminal to run the migrations and seed the database: `./seed_data.sh`
 
 Now that your database is set up all you have to do is run the command:
 
 ```sh
 python manage.py runserver
 ```
+
+## Bangazon ERD
+
+Open the [Bangazon database diagram](https://dbdiagram.io/d/5bad7831a3794b0014b3ccc7) in the browser to view the tables and relationships for your database. Note that the tables names and field names are written in Pascal case, and not in snake case. Your database has everything in snake case, so while the field names are different, the resources and relationships are identical to the ERD.
 
 ## Postman Request Collection
 
