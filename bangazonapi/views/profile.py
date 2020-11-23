@@ -61,7 +61,7 @@ class Profile(ViewSet):
             }
         """
         try:
-            current_user = Customer.objects.get(user=request.auth.user)
+            current_user = Customer.objects.get(user__id=4)
             serializer = ProfileSerializer(current_user, many=False, context={'request': request})
             return Response(serializer.data)
         except Exception as ex:
@@ -207,7 +207,8 @@ class Profile(ViewSet):
             """
 
             try:
-                open_order = Order.objects.get(customer=current_user, payment_type=None)
+                open_order = Order.objects.get(customer=current_user)
+                print(open_order)
             except Order.DoesNotExist as ex:
                 open_order = Order()
                 open_order.created_date = datetime.datetime.now()
