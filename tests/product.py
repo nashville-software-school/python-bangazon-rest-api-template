@@ -97,6 +97,4 @@ class ProductTests(APITestCase):
 
     # TODO: Delete product
 
-    # TODO: Product should be soft deleted if previously purchased
-
     # TODO: Product can be rated. Assert average rating exists.

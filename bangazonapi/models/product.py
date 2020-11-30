@@ -62,10 +62,7 @@ class Product(SafeDeleteModel):
         for rating in ratings:
             total_rating += rating.rating
 
-        try:
-            avg = total_rating / len(ratings)
-        except ZeroDivisionError:
-            avg = 0
+        avg = total_rating / len(ratings)
         return avg
 
     class Meta:
