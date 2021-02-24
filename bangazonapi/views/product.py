@@ -1,4 +1,6 @@
 """View module for handling requests about products"""
+from rest_framework.decorators import action
+from bangazonapi.models.recommendation import Recommendation
 import base64
 from django.core.files.base import ContentFile
 from django.http import HttpResponseServerError
@@ -275,3 +277,19 @@ class Products(ViewSet):
         serializer = ProductSerializer(
             products, many=True, context={'request': request})
         return Response(serializer.data)
+
+    @action(methods=['post'], detail=True)
+    def recommend(self, request, pk=None):
+        """Recommend products to other users"""
+
+        if request.method == "POST":
+            rec = Recommendation()
+            rec.recommender = Customer.objects.get(user=request.auth.user)
+            rec.customer = Customer.objects.get(user__id=request.data["recipient"])
+            rec.product = Product.objects.get(pk=pk)
+
+            rec.save()
+
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+        return Response(None, status=status.HTTP_405_METHOD_NOT_ALLOWED)

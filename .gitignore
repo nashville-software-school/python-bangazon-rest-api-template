@@ -151,3 +151,4 @@ dmypy.json
 .vscode
 migrations
 docs
+Pipfile.lock
