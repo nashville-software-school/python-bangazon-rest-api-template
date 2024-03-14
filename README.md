@@ -1,6 +1,10 @@
 # Bangazon Platform API
 
-## Prerequisites
+## System Dependencies
+
+1. Follow installation guide for installing [pipx](https://pipx.pypa.io/stable/installation/).
+2. Run `pipx install poetry`.
+3. Run the command below for your operating system.
 
 ### Mac OS
 
@@ -11,7 +15,7 @@ brew install libtiff libjpeg webp little-cms2
 ### Linux
 
 ```sh
-sudo apt-get install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
+sudo apt install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
     libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python3-tk \
     libharfbuzz-dev libfribidi-dev libxcb1-dev
 ```
@@ -19,15 +23,12 @@ sudo apt-get install libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
 ## Setup
 
 1. Clone this repository and change to the directory in the terminal.
-1. Run `pipenv shell`
-1. Run `pipenv install`
-1. Execute `./seed_data.sh`
-
-Now that your database is set up all you have to do is run the command:
-
-```sh
-python manage.py runserver
-```
+2. Run `poetry install`
+3. Run `poetry shell`
+4. Run migrations and install starter data with the `./seed_data.sh` script.
+5. Open the project in VS Code if you haven't yet.
+6. Ensure that the correct Python Interpreter is chosen in VS Code.
+7. Start your debugger.
 
 ## Postman Request Collection
 
@@ -48,14 +49,3 @@ To test it out, expand the Profile sub-collection, double-click on Login and sen
     "id": 5
 }
 ```
-
-## Documentation
-
-To view browser-based documentation for the project, follow these steps.
-
-1. Run `./renderdocs.sh`
-1. `cd docs`
-1. Then start a simple web server like `http-server` or `serve`.
-1. In your web browser, go to the URL provided by your web server.
-
-![documentation site](./bangazon-docs.png)
