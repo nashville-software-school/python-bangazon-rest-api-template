@@ -1873,5 +1873,530 @@
             "location": "Moscow",
             "image_path": "products/clothing.png"
         }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 131,
+        "fields": {
+            "name": "Pliers",
+            "customer_id": 5,
+            "price": 306.81,
+            "description": "Heavy-duty pliers for gripping and bending materials",
+            "quantity": 6,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 132,
+        "fields": {
+            "name": "Level",
+            "customer_id": 5,
+            "price": 141.13,
+            "description": "A 24-inch level for ensuring straight lines and level surfaces",
+            "quantity": 4,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 133,
+        "fields": {
+            "name": "Pliers",
+            "customer_id": 4,
+            "price": 490.63,
+            "description": "Heavy-duty pliers for gripping and bending materials",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 134,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 6,
+            "price": 524.87,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 135,
+        "fields": {
+            "name": "Wrench Set",
+            "customer_id": 7,
+            "price": 79.53,
+            "description": "A complete set of combination wrenches",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 136,
+        "fields": {
+            "name": "Pliers",
+            "customer_id": 4,
+            "price": 547.31,
+            "description": "Heavy-duty pliers for gripping and bending materials",
+            "quantity": 5,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 137,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 5,
+            "price": 424.57,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 2,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 138,
+        "fields": {
+            "name": "Electric Drill",
+            "customer_id": 6,
+            "price": 63.19,
+            "description": "A powerful electric drill with variable speed control",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 139,
+        "fields": {
+            "name": "Wrench Set",
+            "customer_id": 4,
+            "price": 352.65,
+            "description": "A complete set of combination wrenches",
+            "quantity": 2,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 140,
+        "fields": {
+            "name": "Screwdriver Set",
+            "customer_id": 7,
+            "price": 414.84,
+            "description": "A set of flathead and Phillips head screwdrivers",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 141,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 6,
+            "price": 541.9,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 10,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 142,
+        "fields": {
+            "name": "Circular Saw",
+            "customer_id": 4,
+            "price": 304.44,
+            "description": "A handheld circular saw for cutting wood",
+            "quantity": 5,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 143,
+        "fields": {
+            "name": "Circular Saw",
+            "customer_id": 5,
+            "price": 367.54,
+            "description": "A handheld circular saw for cutting wood",
+            "quantity": 5,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 144,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 7,
+            "price": 200.55,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 5,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 145,
+        "fields": {
+            "name": "Electric Drill",
+            "customer_id": 7,
+            "price": 335.56,
+            "description": "A powerful electric drill with variable speed control",
+            "quantity": 9,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 146,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 5,
+            "price": 413.55,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 147,
+        "fields": {
+            "name": "Hammer",
+            "customer_id": 5,
+            "price": 139.38,
+            "description": "A durable steel hammer for carpentry",
+            "quantity": 2,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 148,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 4,
+            "price": 299.82,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 1,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 149,
+        "fields": {
+            "name": "Pliers",
+            "customer_id": 4,
+            "price": 388.07,
+            "description": "Heavy-duty pliers for gripping and bending materials",
+            "quantity": 6,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 140,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 5,
+            "price": 505.81,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 6,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 141,
+        "fields": {
+            "name": "Level",
+            "customer_id": 4,
+            "price": 298.37,
+            "description": "A 24-inch level for ensuring straight lines and level surfaces",
+            "quantity": 10,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 142,
+        "fields": {
+            "name": "Chisel Set",
+            "customer_id": 7,
+            "price": 169.76,
+            "description": "A set of wood chisels for carving and shaping",
+            "quantity": 4,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 143,
+        "fields": {
+            "name": "Circular Saw",
+            "customer_id": 5,
+            "price": 190.34,
+            "description": "A handheld circular saw for cutting wood",
+            "quantity": 6,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 144,
+        "fields": {
+            "name": "Wrench Set",
+            "customer_id": 5,
+            "price": 431.15,
+            "description": "A complete set of combination wrenches",
+            "quantity": 7,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 145,
+        "fields": {
+            "name": "Chisel Set",
+            "customer_id": 7,
+            "price": 200.17,
+            "description": "A set of wood chisels for carving and shaping",
+            "quantity": 5,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 146,
+        "fields": {
+            "name": "Utility Knife",
+            "customer_id": 6,
+            "price": 5.58,
+            "description": "A sharp utility knife with replaceable blades",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 147,
+        "fields": {
+            "name": "Wrench Set",
+            "customer_id": 5,
+            "price": 359.47,
+            "description": "A complete set of combination wrenches",
+            "quantity": 6,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 148,
+        "fields": {
+            "name": "Wrench Set",
+            "customer_id": 5,
+            "price": 25.34,
+            "description": "A complete set of combination wrenches",
+            "quantity": 9,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 149,
+        "fields": {
+            "name": "Level",
+            "customer_id": 5,
+            "price": 5.68,
+            "description": "A 24-inch level for ensuring straight lines and level surfaces",
+            "quantity": 6,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 140,
+        "fields": {
+            "name": "Level",
+            "customer_id": 7,
+            "price": 161.68,
+            "description": "A 24-inch level for ensuring straight lines and level surfaces",
+            "quantity": 4,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 141,
+        "fields": {
+            "name": "Chisel Set",
+            "customer_id": 7,
+            "price": 107.36,
+            "description": "A set of wood chisels for carving and shaping",
+            "quantity": 10,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 142,
+        "fields": {
+            "name": "Level",
+            "customer_id": 6,
+            "price": 146.9,
+            "description": "A 24-inch level for ensuring straight lines and level surfaces",
+            "quantity": 3,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 143,
+        "fields": {
+            "name": "Level",
+            "customer_id": 5,
+            "price": 131.87,
+            "description": "A 24-inch level for ensuring straight lines and level surfaces",
+            "quantity": 10,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 144,
+        "fields": {
+            "name": "Hammer",
+            "customer_id": 5,
+            "price": 383.88,
+            "description": "A durable steel hammer for carpentry",
+            "quantity": 4,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
+    },
+    {
+        "model": "bangazonapi.product",
+        "pk": 145,
+        "fields": {
+            "name": "Screwdriver Set",
+            "customer_id": 7,
+            "price": 151.42,
+            "description": "A set of flathead and Phillips head screwdrivers",
+            "quantity": 6,
+            "created_date": "2023-03-14",
+            "category_id": 1,
+            "location": "Workshop",
+            "image_path": "products/tools.png"
+        }
     }
 ]
